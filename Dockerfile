@@ -8,7 +8,7 @@ LABEL org.label-schema.license="GPL-2.0" \
       maintainer="Robert Settlage <rsettlag@vt.edu>"
 
 RUN apt update \
-  && apt install -y python3-dev python3-pip curl g++ unzip zip tar openjdk-11-jdk \
+  && apt install -y vi git wget python3-dev python3-pip curl g++ unzip zip tar openjdk-11-jdk \
   && pip3 install -U pip six numpy wheel setuptools mock 'future>=0.17.1' \
   && pip3 install -U keras_applications --no-deps \
   && pip3 install -U keras_preprocessing --no-deps \
