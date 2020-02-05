@@ -1,5 +1,6 @@
 ## container for creating whl files
 ## bind mount a dir so you can export the whl
+## docker run -v `pwd`:/temp -it rsettlag/ubuntu-bazel-base:18.04-1.2.1 bash
 
 FROM ubuntu:18.04
 
@@ -16,6 +17,9 @@ RUN apt update \
 
 RUN echo "deb [arch=amd64] https://storage.googleapis.com/bazel-apt stable jdk1.8" | tee /etc/apt/sources.list.d/bazel.list
 RUN apt update \
-  && apt install -y bazel bazel-1.2.1
+  && apt install -y bazel \
+  && apt update 
+RUN wget https://github.com/bazelbuild/bazel/releases/download/0.29.1/bazel-0.29.1-installer-linux-x86_64.sh
+RUN bash bazel-0.29.1-installer-linux-x86_64.sh
 
 
