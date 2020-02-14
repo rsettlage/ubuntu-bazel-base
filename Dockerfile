@@ -19,7 +19,7 @@ RUN echo "deb [arch=amd64] https://storage.googleapis.com/bazel-apt stable jdk1.
 RUN apt update \
   && apt install -y bazel \
   && apt update \
-  && apt-get install -y bazel-1.2.1 
+  && apt-get install -y bazel-2.0.0
 ## seems as if TF is working towards a bazel upgrade
 ## RUN wget https://github.com/bazelbuild/bazel/releases/download/0.29.1/bazel-0.29.1-installer-linux-x86_64.sh
 ## RUN bash bazel-0.29.1-installer-linux-x86_64.sh
