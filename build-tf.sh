@@ -1,6 +1,10 @@
 git clone https://github.com/tensorflow/tensorflow.git
 cd tensorflow
-##git checkout v2.1.0
+## seems this is changing, don't do git checkout, use master for now due to bazel version issues
+## git checkout v2.1.0
+###
+###
+### in configure, point to /usr/bin/python3 when prompted for python location
 ./configure
 bazel build //tensorflow/tools/pip_package:build_pip_package
 
